@@ -1,0 +1,505 @@
+{
+  "name": "空白页面",
+  "style": {
+    "background-color": "rgba(128,0,255,1)"
+  },
+  "layers": [{
+    "animate": [{
+      "name": "zoomIn",
+      "type": "em",
+      "style": "zoomIn 0.5s ease 1.6s 1 normal forwards running"
+    }],
+    "data": {
+      "data": "\n                \n                \n                \n                \n                <div>的体验</div>\n            \n            \n            \n            \n            ",
+      "fontStyle": "font-size: 46px; font-weight: bolder; color: rgb(255, 255, 255); text-align: center;"
+    },
+    "estyle": {
+      "opacity": "0.00"
+    },
+    "style": {
+      "width": "200px",
+      "height": "69px",
+      "top": "193px",
+      "left": "63px",
+      "zIndex": 9999,
+      "z-index": 9999
+    },
+    "ue": null,
+    "type": "text",
+    "typename": "文本"
+  }, {
+    "animate": [{
+      "name": "zoomIn",
+      "type": "em",
+      "style": "zoomIn 0.3s ease 1.4s 1 normal forwards running"
+    }],
+    "data": {
+      "data": "\n                \n                \n                \n                \n                <div>不一样</div>\n            \n            \n            \n            \n            ",
+      "fontStyle": "font-size: 60px; font-weight: bolder; color: rgb(255, 255, 255); text-align: center;"
+    },
+    "estyle": {
+      "opacity": "0.00",
+      "background-color": "initial",
+      "border-radius": "300px"
+    },
+    "style": {
+      "width": "202px",
+      "height": "76px",
+      "top": "98px",
+      "left": "62px",
+      "zIndex": 9999,
+      "z-index": 9998
+    },
+    "ue": null,
+    "type": "text",
+    "typename": "文本"
+  }, {
+    "animate": [{
+      "name": "flipInY",
+      "type": "em",
+      "style": "flipInY 1s ease 1.2s 1 normal forwards running"
+    }],
+    "data": {
+      "data": "\n                <div><br></div>\n            ",
+      "fontStyle": ""
+    },
+    "estyle": {
+      "background-color": "rgba(128,0,255,0.79)",
+      "opacity": "0.00"
+    },
+    "style": {
+      "width": "223px",
+      "height": "400px",
+      "top": "33px",
+      "left": "50px",
+      "zIndex": 9999,
+      "z-index": 9997
+    },
+    "ue": null,
+    "type": "text",
+    "typename": "文本"
+  }, {
+    "animate": [{
+      "name": "slideInLeft",
+      "type": "em",
+      "style": "slideInLeft 1s ease 1.6s 1 normal forwards running"
+    }],
+    "data": {
+      "data": "\n                <div><br></div>\n            ",
+      "fontStyle": ""
+    },
+    "estyle": {
+      "background-color": "rgba(0,0,0,0.62)",
+      "opacity": "0.00"
+    },
+    "style": {
+      "width": "695px",
+      "height": "37px",
+      "top": "123px",
+      "left": "61px",
+      "zIndex": 9999,
+      "z-index": 9996,
+      "transform": "rotate(221deg)"
+    },
+    "ue": null,
+    "type": "text",
+    "typename": "文本"
+  }, {
+    "animate": [{
+      "name": "slideInLeft",
+      "type": "em",
+      "style": "slideInLeft 1s ease 1.4s 1 normal forwards running"
+    }],
+    "data": {
+      "data": "\n                <div><br></div>\n            ",
+      "fontStyle": ""
+    },
+    "estyle": {
+      "background-color": "rgba(0,0,0,0.62)",
+      "opacity": "0.00"
+    },
+    "style": {
+      "width": "695px",
+      "height": "37px",
+      "top": "147px",
+      "left": "0px",
+      "zIndex": 9999,
+      "z-index": 9995,
+      "transform": "rotate(221deg)"
+    },
+    "ue": null,
+    "type": "text",
+    "typename": "文本"
+  }, {
+    "animate": [{
+      "name": "slideInLeft",
+      "type": "em",
+      "style": "slideInLeft 1s ease 1.2s 1 normal forwards running"
+    }],
+    "data": {
+      "data": "\n                <div><br></div>\n            ",
+      "fontStyle": ""
+    },
+    "estyle": {
+      "background-color": "rgba(0,0,0,0.62)",
+      "opacity": "0.00"
+    },
+    "style": {
+      "width": "695px",
+      "height": "37px",
+      "top": "161px",
+      "left": "-68px",
+      "zIndex": 9999,
+      "z-index": 9994,
+      "transform": "rotate(221deg)"
+    },
+    "ue": null,
+    "type": "text",
+    "typename": "文本"
+  }, {
+    "animate": [{
+      "name": "slideInLeft",
+      "type": "em",
+      "style": "slideInLeft 1s ease 1s 1 normal forwards running"
+    }],
+    "data": {
+      "data": "\n                <div><br></div>\n            ",
+      "fontStyle": ""
+    },
+    "estyle": {
+      "background-color": "rgba(0,0,0,0.62)",
+      "opacity": "0.00"
+    },
+    "style": {
+      "width": "695px",
+      "height": "37px",
+      "top": "195px",
+      "left": "-113px",
+      "zIndex": 9999,
+      "z-index": 9993,
+      "transform": "rotate(221deg)"
+    },
+    "ue": null,
+    "type": "text",
+    "typename": "文本"
+  }, {
+    "animate": [{
+      "name": "slideInLeft",
+      "type": "em",
+      "style": "slideInLeft 1s ease 0.8s 1 normal forwards running"
+    }],
+    "data": {
+      "data": "\n                <div><br></div>\n            ",
+      "fontStyle": ""
+    },
+    "estyle": {
+      "background-color": "rgba(0,0,0,0.62)",
+      "opacity": "0.00"
+    },
+    "style": {
+      "width": "695px",
+      "height": "37px",
+      "top": "235px",
+      "left": "-151px",
+      "zIndex": 9999,
+      "z-index": 9992,
+      "transform": "rotate(221deg)"
+    },
+    "ue": null,
+    "type": "text",
+    "typename": "文本"
+  }, {
+    "animate": [{
+      "name": "slideInLeft",
+      "type": "em",
+      "style": "slideInLeft 1s ease 0.6s 1 normal forwards running"
+    }],
+    "data": {
+      "data": "\n                <div><br></div>\n            ",
+      "fontStyle": ""
+    },
+    "estyle": {
+      "background-color": "rgba(0,0,0,0.62)",
+      "opacity": "0.00"
+    },
+    "style": {
+      "width": "695px",
+      "height": "37px",
+      "top": "271px",
+      "left": "-194px",
+      "zIndex": 9999,
+      "z-index": 9991,
+      "transform": "rotate(221deg)"
+    },
+    "ue": null,
+    "type": "text",
+    "typename": "文本"
+  }, {
+    "animate": [{
+      "name": "slideInLeft",
+      "type": "em",
+      "style": "slideInLeft 1s ease 0.4s 1 normal forwards running"
+    }],
+    "data": {
+      "data": "\n                <div><br></div>\n            ",
+      "fontStyle": ""
+    },
+    "estyle": {
+      "background-color": "rgba(0,0,0,0.62)",
+      "opacity": "0.00"
+    },
+    "style": {
+      "width": "695px",
+      "height": "37px",
+      "top": "315px",
+      "left": "-234px",
+      "zIndex": 9999,
+      "z-index": 9990,
+      "transform": "rotate(221deg)"
+    },
+    "ue": null,
+    "type": "text",
+    "typename": "文本"
+  }, {
+    "animate": [{
+      "name": "slideInLeft",
+      "type": "em",
+      "style": "slideInLeft 1s ease 0.2s 1 normal forwards running"
+    }],
+    "data": {
+      "data": "\n                <div><br></div>\n            ",
+      "fontStyle": ""
+    },
+    "estyle": {
+      "background-color": "rgba(0,0,0,0.62)",
+      "opacity": "0.00"
+    },
+    "style": {
+      "width": "695px",
+      "height": "37px",
+      "top": "359px",
+      "left": "-267px",
+      "zIndex": 9999,
+      "z-index": 9989,
+      "transform": "rotate(221deg)"
+    },
+    "ue": null,
+    "type": "text",
+    "typename": "文本"
+  }, {
+    "animate": [{
+      "name": "slideInLeft",
+      "type": "em",
+      "style": "slideInLeft 1s ease 0s 1 normal forwards running"
+    }],
+    "data": {
+      "data": "\n                <div><br></div>\n            ",
+      "fontStyle": ""
+    },
+    "estyle": {
+      "background-color": "rgba(0,0,0,0.62)",
+      "opacity": "0.00"
+    },
+    "style": {
+      "width": "695px",
+      "height": "37px",
+      "top": "414px",
+      "left": "-292px",
+      "zIndex": 9999,
+      "z-index": 9988,
+      "transform": "rotate(221deg)"
+    },
+    "ue": null,
+    "type": "text",
+    "typename": "文本"
+  }, {
+    "animate": [{
+      "name": "slideInLeft",
+      "type": "em",
+      "style": "slideInLeft 1s ease 1.2s 1 normal forwards running"
+    }],
+    "data": {
+      "data": "\n                <div><br></div>\n            ",
+      "fontStyle": ""
+    },
+    "estyle": {
+      "background-color": "rgba(0,0,0,0.62)",
+      "opacity": "0.00"
+    },
+    "style": {
+      "width": "695px",
+      "height": "37px",
+      "top": "373px",
+      "left": "-82px",
+      "zIndex": 9999,
+      "z-index": 9987,
+      "transform": "rotate(309deg)"
+    },
+    "ue": null,
+    "type": "text",
+    "typename": "文本"
+  }, {
+    "animate": [{
+      "name": "slideInLeft",
+      "type": "em",
+      "style": "slideInLeft 1s ease 1.0s 1 normal forwards running"
+    }],
+    "data": {
+      "data": "\n                <div><br></div>\n            ",
+      "fontStyle": ""
+    },
+    "estyle": {
+      "background-color": "rgba(0,0,0,0.62)",
+      "opacity": "0.00"
+    },
+    "style": {
+      "width": "695px",
+      "height": "37px",
+      "top": "333px",
+      "left": "-126px",
+      "zIndex": 9999,
+      "z-index": 9986,
+      "transform": "rotate(309deg)"
+    },
+    "ue": null,
+    "type": "text",
+    "typename": "文本"
+  }, {
+    "animate": [{
+      "name": "slideInLeft",
+      "type": "em",
+      "style": "slideInLeft 1s ease 0.8s 1 normal forwards running"
+    }],
+    "data": {
+      "data": "\n                <div><br></div>\n            ",
+      "fontStyle": ""
+    },
+    "estyle": {
+      "background-color": "rgba(0,0,0,0.62)",
+      "opacity": "0.00"
+    },
+    "style": {
+      "width": "695px",
+      "height": "37px",
+      "top": "300px",
+      "left": "-178px",
+      "zIndex": 9999,
+      "z-index": 9985,
+      "transform": "rotate(309deg)"
+    },
+    "ue": null,
+    "type": "text",
+    "typename": "文本"
+  }, {
+    "animate": [{
+      "name": "slideInLeft",
+      "type": "em",
+      "style": "slideInLeft 1s ease 0.6s 1 normal forwards running"
+    }],
+    "data": {
+      "data": "\n                <div><br></div>\n            ",
+      "fontStyle": ""
+    },
+    "estyle": {
+      "background-color": "rgba(0,0,0,0.62)",
+      "opacity": "0.00"
+    },
+    "style": {
+      "width": "695px",
+      "height": "37px",
+      "top": "251px",
+      "left": "-214px",
+      "zIndex": 9999,
+      "z-index": 9984,
+      "transform": "rotate(309deg)"
+    },
+    "ue": null,
+    "type": "text",
+    "typename": "文本"
+  }, {
+    "animate": [{
+      "name": "slideInLeft",
+      "type": "em",
+      "style": "slideInLeft 1s ease 0.4s 1 normal forwards running"
+    }],
+    "data": {
+      "data": "\n                <div><br></div>\n            ",
+      "fontStyle": ""
+    },
+    "estyle": {
+      "background-color": "rgba(0,0,0,0.62)",
+      "opacity": "0.00"
+    },
+    "style": {
+      "width": "695px",
+      "height": "37px",
+      "top": "219px",
+      "left": "-264px",
+      "zIndex": 9999,
+      "z-index": 9983,
+      "transform": "rotate(309deg)"
+    },
+    "ue": null,
+    "type": "text",
+    "typename": "文本"
+  }, {
+    "animate": [{
+      "name": "slideInLeft",
+      "type": "em",
+      "style": "slideInLeft 1s ease 0.2s 1 normal forwards running"
+    }],
+    "data": {
+      "data": "\n                <div><br></div>\n            ",
+      "fontStyle": ""
+    },
+    "estyle": {
+      "background-color": "rgba(0,0,0,0.62)",
+      "opacity": "0.00"
+    },
+    "style": {
+      "width": "695px",
+      "height": "37px",
+      "top": "207px",
+      "left": "-330px",
+      "zIndex": 9999,
+      "z-index": 9982,
+      "transform": "rotate(309deg)"
+    },
+    "ue": null,
+    "type": "text",
+    "typename": "文本"
+  }, {
+    "animate": [{
+      "name": "slideInLeft",
+      "type": "em",
+      "style": "slideInLeft 1s ease 0s 1 normal forwards running"
+    }],
+    "data": {
+      "data": "\n                <div><br></div>\n            ",
+      "fontStyle": ""
+    },
+    "estyle": {
+      "background-color": "rgba(0,0,0,0.62)",
+      "opacity": "0.00"
+    },
+    "style": {
+      "width": "695px",
+      "height": "37px",
+      "top": "128px",
+      "left": "-342px",
+      "zIndex": 9999,
+      "z-index": 9981,
+      "transform": "rotate(309deg)"
+    },
+    "ue": null,
+    "type": "text",
+    "typename": "文本"
+  }],
+  "slider": {
+    "animate": 1,
+    "autoplay": false,
+    "lock": false,
+    "time": 5
+  },
+  "index": 1
+}
