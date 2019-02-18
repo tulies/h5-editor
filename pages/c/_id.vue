@@ -1,246 +1,317 @@
 <template>
-  <div class="editor-wordspace" @click="handelClickWorkspace">
-    <div class="device-box">
-      <div class="screen-box">
-        <div class="element-items">
-          <div class="element-box" :style="elestyle(el1)" @click.stop.prevent="handleClickElement($event,el1)">
-            <div class="element-box-contents">
-              <span>哈哈哈哈哈哈哈哈</span>
-            </div>
-          </div>
-
-          <div class="element-box" :style="elestyle(el2)" @click.stop.prevent="handleClickElement($event,el2)">
-            <div class="element-box-contents">
-              <img class="element" src="../../assets/tysx.png">
-            </div>
-          </div>
+  <el-container class="main-container">
+    <el-header class="main-header">
+      <div class="header-container">
+        <div class="logo">
+          <i class="logo-icon sceneiconfont sceneicon-changjingguanli" />
         </div>
-
-        <r-r-z
-          v-if="showRRZ"
-          :top="rrzdata.top"
-          :left="rrzdata.left"
-          :width="rrzdata.width"
-          :height="rrzdata.height"
-          :rotate-angle="rrzdata.rotateAngle"
-          :aspect-ratio="false"
-          :min-width="-Infinity"
-          :min-height="-Infinity"
-          zoomable="n, w, s, e, nw, ne, se, sw"
-          :rotatable="true"
-          :on-rotate-start="handleRotateStart"
-          :on-rotate="handleRotate"
-          :on-rotate-end="handleRotateEnd"
-          :on-resize-start="handleResizeStart"
-          :on-resize="handleResize"
-          :on-resize-end="handleResizeEnd"
-          :on-drag-start="handleDragStart"
-          :on-drag="handleDrag"
-          :on-drag-end="handleDragEnd"
-        />
+        <dl class="comp_panel">
+          <dd>
+            <p class="icon">
+              <i class="sceneiconfont sceneicon-xingzhuang-wenzi" />
+            </p>
+            <p class="title">
+              文本
+            </p>
+          </dd>
+          <dd>
+            <p class="icon">
+              <i class="sceneiconfont sceneicon-xingzhuang-tupian" />
+            </p>
+            <p class="title">
+              图片
+            </p>
+          </dd>
+          <dd>
+            <p class="icon">
+              <i class="sceneiconfont sceneicon-music4" />
+            </p>
+            <p class="title">
+              音乐
+            </p>
+          </dd>
+          <dd>
+            <p class="icon">
+              <i class="sceneiconfont sceneicon-rongxuejirongjiechi" />
+            </p>
+            <p class="title">
+              背景
+            </p>
+          </dd>
+          <dd>
+            <p class="icon">
+              <i class="sceneiconfont sceneicon-icon_yingyongguanli" />
+            </p>
+            <p class="title">
+              组件
+            </p>
+          </dd>
+          <dd>
+            <p class="icon">
+              <i class="sceneiconfont sceneicon-moshubang" />
+            </p>
+            <p class="title">
+              特效
+            </p>
+          </dd>
+        </dl>
+        <div class="actions">
+          <el-button class="action-item" size="small" type="primary">
+            预览和设置
+          </el-button>
+          <el-button class="action-item" size="small" type="primary">
+            保存
+          </el-button>
+          <el-button class="action-item" size="small" type="primary">
+            发布
+          </el-button>
+        </div>
       </div>
-      <div class="b bt" />
-      <div class="b bb" />
-      <div class="b bl" />
-      <div class="b br" />
-    </div>
-  </div>
+    </el-header>
+    <el-container>
+      <el-aside width="72px">
+        <div class="left-aside">
+          <dl class="comp_panel">
+            <dd>
+              <p class="icon">
+                <i class="sceneiconfont sceneicon-biaodanzujian-shurukuang" />
+              </p>
+              <p class="title">
+                元素模板
+              </p>
+            </dd>
+            <dd>
+              <p class="icon">
+                <i class="sceneiconfont sceneicon-gongnengdingyi" />
+              </p>
+              <p class="title">
+                功能模板
+              </p>
+            </dd>
+            <dd>
+              <p class="icon">
+                <i class="sceneiconfont sceneicon-tubiao-qiapian" />
+              </p>
+              <p class="title">
+                单页模板
+              </p>
+            </dd>
+            <dd>
+              <p class="icon">
+                <i class="sceneiconfont sceneicon-icon_loading" />
+              </p>
+              <p class="title">
+                特权模板
+              </p>
+            </dd>
+          </dl>
+          <dl class="txt_pannel">
+            <dd>偏好</dd>
+            <dd>公告</dd>
+            <dd>教程</dd>
+            <dd>反馈</dd>
+          </dl>
+        </div>
+      </el-aside>
+      <el-main class="main-workspace">
+        <workspace-manage :page-data="curPage" />
+      </el-main>
+      <el-aside width="260px">
+        <div class="right-aside">
+          <el-tabs class="pannel-el-tabs" type="border-card" :stretch="true">
+            <el-tab-pane label="组件属性">
+              <element-manage />
+            </el-tab-pane>
+            <el-tab-pane label="图层管理">
+              <layer-manage />
+            </el-tab-pane>
+            <el-tab-pane label="页面管理">
+              <page-manage :scene-data="sceneData" />
+            </el-tab-pane>
+          </el-tabs>
+        </div>
+      </el-aside>
+    </el-container>
+  </el-container>
 </template>
 <script>
-// import { tLToCenter } from '../../components/resizable-rotatable-draggable/utils'
-import RRZ from '@/components/resizable-rotatable-draggable/index.vue'
+import LayerManage from '@/components/views/c/layer-manage'
+import PageManage from '@/components/views/c/page-manage'
+import WorkspaceManage from '@/components/views/c/workspace-manage'
+import ElementManage from '@/components/views/c/element-manage'
+import sceneData from '@/data/data.js'
+
 export default {
   components: {
-    RRZ
+    LayerManage,
+    PageManage,
+    WorkspaceManage,
+    ElementManage
   },
   data() {
     return {
-      showRRZ: false,
-      rrzdata: {
-        width: 0,
-        height: 0,
-        top: 0,
-        left: 0,
-        rotateAngle: 0
-      },
-      curEL: null,
-      el1: {
-        width: 200,
-        height: 60,
-        top: 50,
-        left: 100,
-        rotateAngle: 0
-      },
-      el2: {
-        width: 100,
-        height: 100,
-        top: 200,
-        left: 100,
-        rotateAngle: 0
-      }
-
+      sceneData: {},
+      curEl: null,
+      curPage: null
     }
   },
-  computed: {
-    resizerstyle() {
-      const { left, top, width, height, rotateAngle } = this.rrzdata
-      return {
-        width: `${width}px`,
-        height: `${height}px`,
-        transform: `rotate(${rotateAngle}deg)`,
-        left: `${left}px`,
-        top: `${top}px`
-      }
-    }
-  },
-  methods: {
-    elestyle(d) {
-      const { left, top, width, height, rotateAngle } = d
-      return {
-        width: `${width}px`,
-        height: `${height}px`,
-        transform: `rotate(${rotateAngle}deg)`,
-        left: `${left}px`,
-        top: `${top}px`
-      }
-    },
-    // 点击工作区
-    handelClickWorkspace(e) {
-      // console.log(e.target.className)
-      if (['screen-box', 'editor-wordspace'].includes(e.target.className)) {
-        this.showRRZ = false
-      }
-    },
-    // 点击页面元素
-    handleClickElement(e, el) {
-      this.curEL = el
-      this.rrzdata = {
-        ...this.curEL
-      }
-      console.log(el)
-      console.log(this.curEL)
-      this.showRRZ = true
-    },
-    handleResizeStart() {
-      // console.log('ResizeStart')
-    },
-    handleResize({ top, left, width, height }, isShiftKey, type) {
-      this.rrzdata.top = Math.round(top)
-      this.rrzdata.left = Math.round(left)
-      this.rrzdata.width = Math.round(width)
-      this.rrzdata.height = Math.round(height)
-
-      this.curEL.top = this.rrzdata.top
-      this.curEL.left = this.rrzdata.left
-      this.curEL.width = this.rrzdata.width
-      this.curEL.height = this.rrzdata.height
-    },
-    handleResizeEnd() {
-      // console.log('RotateEnd')
-    },
-
-    handleDragStart() {
-      // console.log('DragStart')
-    },
-    handleDrag(deltaX, deltaY) {
-      // console.log(deltaX, deltaY)
-      this.rrzdata.left = this.rrzdata.left + deltaX
-      this.rrzdata.top = this.rrzdata.top + deltaY
-
-      this.curEL.top = this.rrzdata.top
-      this.curEL.left = this.rrzdata.left
-      // this.left = 300
-    },
-    handleDragEnd() {
-      // console.log('RotateEnd')
-    },
-    handleRotateStart() {
-      // console.log('RotateStart')
-    },
-    handleRotate(rotateAngle) {
-      this.rrzdata.rotateAngle = rotateAngle
-      this.curEL.rotateAngle = rotateAngle
-    },
-    handleRotateEnd() {
-      // console.log('RotateEnd')
-    }
-
+  created() {
+    const { pages } = sceneData
+    this.sceneData = sceneData
+    this.curPage = pages[0]
+    console.log('场景数据', this.sceneData)
+    console.log('页面数据', this.curPage)
   }
 }
 </script>
+
 <style lang="scss" scoped>
-.editor-wordspace{
-  width: 100%;
-  height:100vh;
-  display:flex;
-  align-items:center;/*垂直居中*/
-  justify-content: center;/*水平居中*/
+@import "@/assets/css/config.scss";
+.main-container {
+  height: 100vh;
 }
-.device-box{
-  // flex: 1;
-  display:inline-block;
-  padding: 30px 5px;
-  background-color: #efefef;
-  border-radius: 30px;
-  position:relative;
-  .b{
-    position: absolute;
-    z-index: 100;
-    background-color: #efefef;
-    &.bt{
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 30px;
-      border-top-left-radius: 30px;
-      border-top-right-radius: 30px;
+.main-header {
+  height: 56px;
+  padding: 0;
+  border-bottom: 1px solid #ccd5db;
+}
+.header-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
 
-    }
-    &.bb{
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 30px;
-      border-bottom-left-radius: 30px;
-      border-bottom-right-radius: 30px;
-    }
-    &.bl{
-      top: 30px;
-      left: 0;
-      bottom: 30px;
-      width: 6px;
-    }
-    &.br{
-      top: 30px;
-      bottom: 30px;
-      right: 0;
-      width: 6px;
-    }
+  .logo {
+    height: 56px;
+    width: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-right: 1px solid #ccd5db;
+    color: $mainColor;
   }
 
-  .screen-box{
-    width: 320px;
-    height: 480px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    position: relative;
-  }
-  .element-box{
-    position: absolute;
-    text-align: center;
+  .comp_panel {
+    display: flex;
+    dd {
+      width: 60px;
+      height: 56px;
+      text-align: center;
 
-    .element-box-contents{
-      height: 100%;
-      width: 100%;
-      .element{
-        min-width: 1px;
-        min-height: 1px;
-        color: inherit;
-        height: 100%;
-        width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      color: #333;
+
+      cursor: pointer;
+
+      .icon {
+        font-size: 20px;
+      }
+      .title {
+        font-size: 12px;
+      }
+
+      &:hover {
+        background-color: $mainColor;
+        color: #fff;
       }
     }
   }
+
+  .actions {
+    padding-right: 10px;
+    .action-item {
+      padding: 9px;
+    }
+  }
+}
+.main-workspace{
+  background-color:#efefef;
+}
+.left-aside {
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid #ccd5db;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .comp_panel {
+    display: flex;
+    flex-direction: column;
+    dd {
+      width: 100%;
+      height: 56px;
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      color: #333;
+
+      cursor: pointer;
+
+      .icon {
+        font-size: 20px;
+      }
+      .title {
+        font-size: 12px;
+      }
+
+      &:hover {
+        background-color: $mainColor;
+        color: #fff;
+      }
+    }
+  }
+  .txt_pannel {
+    padding: 10px 0;
+    border-top: 1px solid #efefef;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+  }
 }
 
+.right-aside {
+  width: 100%;
+  height: 100%;
+  border-left: 1px solid #ccd5db;
+}
+</style>
+
+<style lang="scss">
+.pannel-el-tabs {
+    height: 100%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    >.el-tabs__header .el-tabs__item{
+      padding:0 10px;
+      &:nth-child(2), &:last-child{
+        padding:0 10px;
+      }
+      &.is-active{
+        color:#000;
+      }
+      &:not(.is-disabled):hover{
+        color:#000;
+      }
+      &:not(.is-disabled):hover{
+        color:#000;
+      }
+
+    }
+    >.el-tabs__content {
+      flex: 1;
+      padding: 0;
+    }
+  }
 </style>

@@ -14,7 +14,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: '//at.alicdn.com/t/font_1035088_0rbwgfiqjd8.css' }
     ]
   },
 
@@ -27,8 +28,9 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '@/assets/css/reset.css',
     'element-ui/lib/theme-chalk/index.css',
-    '@/assets/index.scss'
+    '@/assets/css/index.scss'
   ],
 
   /*

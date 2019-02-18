@@ -15,7 +15,36 @@ export default (app) => {
     // 元素标题
     title: { type: Schema.Types.String },
     // css样式 对象
+    /**
+     * top
+     * left
+     * width
+     * height
+     * lineHeight
+     *
+     * color
+     * fontSize
+     * fontFamily
+     * backgroundColor
+     * opacity
+     * transform
+     *
+     * borderWidth
+     * borderStyle
+     * borderColor
+     * borderRadiusPerc 百分比
+     *
+     * zIndex 图层层级用
+     */
     css: { type: Schema.Types.Mixed },
+    // 组件属性
+    /**
+     * content 文本组件字段
+     * src 图片地址
+     */
+    properties: {
+      type: Schema.Types.Mixed
+    },
     // 动画效果，对象数组
     animate: { type: [ Schema.Types.Mixed ] }
   })

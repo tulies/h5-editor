@@ -1,3 +1,10 @@
+// @import '../font/iconfont/iconfont.css';
+@import './main.scss';
+
+// 重置图标字体大小
+.sceneiconfont {
+  font-size: 1em;
+}
 .resizer{
   position: absolute;
   z-index: 200;
